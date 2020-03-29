@@ -1,0 +1,14 @@
+<launch>
+    <arg name="" doc="Comentario acerca del argumento"/>
+    <arg name="node_name" default="edge_detector_node"/>
+    <arg name="pkg_name" value=primer_paquete"/>
+
+	
+    <node name="$(arg node_name)" type="edge_detector_node.py" pkg="$(arg pkg_name)" output="screen" />
+
+    <!-- Publications -->
+    <!-- "~compressed_image/edge_detection": sensor_msgs/CompressedImage. Raw image by decoding a compressed image in jpeg format.-->
+    <!-- Subscriptions -->
+    <!-- "~compressed_image": sensor_msgs/CompressedImage. Input compressed image in jpeg format.-->
+
+</launch>
